@@ -32,7 +32,6 @@ public class ApplicationController {
 		Authentication authentication,
 		@RequestBody ApplicationCreateRequest request
 	) throws Exception {
-		System.out.println(((CustomOAuth2User)authentication.getPrincipal()).getUsername());
 		return ResponseEntity.ok(applicationService.createApplication(request, ((CustomOAuth2User)authentication.getPrincipal()).getUsername()));
 	}
 }
