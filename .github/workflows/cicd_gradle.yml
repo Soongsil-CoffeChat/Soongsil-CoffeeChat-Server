@@ -20,11 +20,11 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: 2) Convert to prod config
+      - name: 2) Convert to prod config (env)
         run: |
           cd ./src/main/resources
-          touch ./application-prod.yml
-          echo "${{ secrets.APPLICATION_PROD }}" > ./application-prod.yml
+          touch ./application.yml
+          echo "${{ secrets.APPLICATION_PROD }}" > ./application.yml
 
 
       - name: 4) Grant permission
