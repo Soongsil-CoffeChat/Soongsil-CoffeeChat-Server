@@ -1,4 +1,4 @@
-**/resources/*.yml
+**/resources/application-prod.yml
 HELP.md
 .gradle
 build/
