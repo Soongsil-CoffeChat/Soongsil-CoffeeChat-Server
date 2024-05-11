@@ -105,7 +105,7 @@ public class SecurityConfig {
 			.authorizeHttpRequests((auth) -> auth
 				.requestMatchers("/").permitAll()
 				.requestMatchers("/reissue").permitAll()
-				.requestMatchers("/auth/email").permitAll()
+				.requestMatchers("/auth/email/**").permitAll()
 				.requestMatchers("/api/v1/user/**").hasRole("USER")
 				//.requestMatchers("/api/v1/**").hasAnyRole("MENTEE", "MENTOR") //로그인 제외하면 다 멘티나 멘토 아니면 접근불가
 				.requestMatchers("api/v1/possibleDate/**").hasRole("MENTOR")
